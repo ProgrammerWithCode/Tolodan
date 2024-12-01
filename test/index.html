@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>الي لدن احمد</title>
+  <style>
+    body {
+        background-color: black;
+    }
+    .typing1  {
+      font-size: 50px;
+     
+      display: flex;
+      flex-direction: column;
+      border-bottom: 2px solid #ccc;
+      text-align: center;
+      margin: auto;
+      color: white;
+      
+      animation: typing 3s steps(40, end), blink-caret .5s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes   blink-caret {
+      50% { border-color: transparent; }
+    }
+    .circle-image {
+  border-radius: 50%; /* لتحويل الصورة إلى شكل دائري */
+  width: 200px; /* عرض الصورة */
+  height: 200px; /* ارتفاع الصورة */
+  object-fit: cover; /* لتغطية الصورة للعنصر بالكامل */
+  animation: glow 1s infinite alternate;
+  margin: auto;
+  text-align: center;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(180, 178, 66, 0.5)
+  }
+  to {
+    box-shadow: 0 0 20px rgb(214, 193, 193);
+  }
+}
+    
+  </style>
+</head>
+<body>
+    <img  class = "circle-image" src="https://scontent-pmo1-1.xx.fbcdn.net/v/t39.30808-6/239642095_951491138762093_4187654687623363841_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=_eS2zH3_TgwQ7kNvgEKg7Zg&_nc_zt=23&_nc_ht=scontent-pmo1-1.xx&_nc_gid=ATxfBBS4HwyBbIOFYj-BnLY&oh=00_AYDkp66guXm2bQiP1DMDXC6OlPS7uU4r2NAb89aJaW3RxQ&oe=6752538C" alt="" srcset="">
+
+  <p class="typing1">
+  
+  </p>
+
+  <script>
+   
+   const text =   " بما ان انتي يتحبي الجافا اسكريبت وبتدريسها كمان جاتني فكرة ارسليك نتيجة كود جافا اسكيربت عشان اقوليك فيها لدن احمد ربنايديكي في مراديك ويوفقيك ي اجمل لدن فيك ي مصر وبتوفيق ليك في كورساتيك وبوستاتيك البتعمليها عشان تيسري للناس المعلومات شكرا لكي ي لدن" 
+   const element = document.querySelector('.typing1');
+   const el2 = document.querySelector(".typing2");
+   let i =0;
+ function type1(){
+     if (i < text.length){
+         element.textContent += text.charAt(i);
+         console.log(element);
+         i++;
+         setTimeout(type1 , 100);
+     }
+
+ }
+
+
+ type1();
+
+  
+ 
+
+
+  </script>
+</body>
+</html>
